@@ -1,0 +1,75 @@
+### Request 1: Add user 1
+http://localhost:3000/create?name=Ava Walker&age=27&email=ava.walker@example.com&phoneNumber=6505848540
+
+### Request 2: Add user 2
+http://localhost:3000/create?name=Arnold Owens&age=24&email=arnold.owens@example.com&phoneNumber=7074540929
+
+### Request 3: Add user 3 - no phone number
+http://localhost:3000/create?name=Javier Sanders&age=61&email=javier.sanders@example.com
+
+### Request 4: Add user 4
+http://localhost:3000/create?name=Bobby Hamilton&age=27&email=bobby.hamilton@example.com&phoneNumber=16817174606
+
+### Request 5: Add user 5
+http://localhost:3000/create?name=Brett Jimenez&age=65&email=brett.jimenez@example.com&phoneNumber=3703831407
+
+### Request 6: Add user 6
+http://localhost:3000/create?name=Cher Gray&age=27&email=cher@example.com&phoneNumber=8114482
+
+### Request 7: Retrieve all users. Must return 6 users.
+http://localhost:3000/retrieve
+
+### Request 8: Retrieve byc:\Users\brant\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html _id.
+### Note: Update the value of _id in the following URL to the value of _id assigned to Cher Gray
+http://localhost:3000/retrieve?_id=636fb544ffc88fefeba67e40
+
+### Request 9: Retrieve by name. Must return 1 user
+http://localhost:3000/retrieve?name=Bobby Hamilton
+
+### Request 10: Retrieve by email. Must return 1 user
+http://localhost:3000/retrieve?email=cher@example.com
+
+### Request 11: Retrieve by age. Must return 3 users
+http://localhost:3000/retrieve?age=27
+
+### Request 12: Retrieve by phone. Must return 1 user, Cher Gray
+http://localhost:3000/retrieve?phoneNumber=8114482
+
+### Request 13 : Update Cher Gray. updateCount must be 1
+### Note: Update the value of _id in the following URL to the value of _id assigned to Cher Gray
+http://localhost:3000/update?_id=62789164e5b00e4f505b8b28&age=28&phoneNumber=12193456
+
+### Request 14: Update using non-existent id. 
+### { "Error" : "Not found"}
+http://localhost:3000/update?_id=61015ac80991b44b4c49eeaf&age=28&phoneNumber=12193456            
+
+### Request 15: Retrieve by phone and age. Must return 1 user, Cher Gray
+http://localhost:3000/retrieve?phoneNumber=12193456&age=28
+
+### Request 16: Retrieve by age. Must return 2 users
+http://localhost:3000/retrieve?age=27
+
+### Request 17: Retrieve by age. Must return 0 users
+http://localhost:3000/retrieve?age=21
+
+### Request 18: Delete by _id. deleteCount must be 1. 
+### Note: Update the value of _id in the following URL to the value of _id assigned to Cher Gray
+http://localhost:3000/delete?_id=62789164e5b00e4f505b8b28        
+
+### Request 19: Delete by name. deleteCount must be 1
+http://localhost:3000/delete?name=Javier Sanders
+
+### Request 20: Delete by age. deleteCount must be 2
+http://localhost:3000/delete?age=27
+
+### Request 21: Retrieve by age. Must return 0 users
+http://localhost:3000/retrieve?age=27
+
+### Request 22: Delete by email. deleteCount must be 1
+http://localhost:3000/delete?email=arnold.owens@example.com 
+
+### Request 23: Delete by phoneNumber. deleteCount must be 1
+http://localhost:3000/delete?phoneNumber=3703831407
+
+### Request 24: Retrieve all users. Must return 0 users
+http://localhost:3000/retrieve
